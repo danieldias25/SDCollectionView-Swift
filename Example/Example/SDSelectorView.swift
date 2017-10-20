@@ -17,7 +17,7 @@ protocol SDSelectorViewDelegate {
 
 
 class SDSelectorView: UIScrollView {
-    var SDdelegate: SDSelectorViewDelegate?
+    var SDDelegate: SDSelectorViewDelegate?
     
     var presentationModeEnable = true
     var presentationScale:CGFloat = 2.0
@@ -126,7 +126,7 @@ class SDSelectorView: UIScrollView {
         
         self.setContentOffset(CGPoint(x: x, y: 0), animated: true)
         self.expandImageView(index: self.collectionIndex)
-        SDdelegate?.didCangedIndex(index: self.collectionIndex)
+        SDDelegate?.didCangedIndex(index: self.collectionIndex)
 
         
     }
@@ -137,7 +137,7 @@ class SDSelectorView: UIScrollView {
         
         if tappedImage.tag == self.collectionIndex {
             
-            self.SDdelegate?.didSelectView(index: tappedImage.tag)
+            self.SDDelegate?.didSelectView(index: tappedImage.tag)
             
             if self.presentationModeEnable == true {
             
@@ -210,7 +210,7 @@ class SDSelectorView: UIScrollView {
         }
         
         self.expandImageView(index: self.collectionIndex)
-        SDdelegate?.didCangedIndex(index: self.collectionIndex)
+        SDDelegate?.didCangedIndex(index: self.collectionIndex)
 
         
         guard x >= 0 && x <= scrollView.contentSize.width - scrollView.frame.width else {
