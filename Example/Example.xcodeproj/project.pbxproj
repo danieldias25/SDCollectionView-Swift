@@ -12,6 +12,8 @@
 		A7729F991F9A86AB00BFF2B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7729F971F9A86AB00BFF2B2 /* Main.storyboard */; };
 		A7729F9B1F9A86AB00BFF2B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7729F9A1F9A86AB00BFF2B2 /* Assets.xcassets */; };
 		A7729F9E1F9A86AB00BFF2B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7729F9C1F9A86AB00BFF2B2 /* LaunchScreen.storyboard */; };
+		A7729FA71F9A88B500BFF2B2 /* SDPresentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7729FA51F9A88B500BFF2B2 /* SDPresentationView.swift */; };
+		A7729FA81F9A88B500BFF2B2 /* SDSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7729FA61F9A88B500BFF2B2 /* SDSelectorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		A7729F9A1F9A86AB00BFF2B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A7729F9D1F9A86AB00BFF2B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A7729F9F1F9A86AB00BFF2B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A7729FA51F9A88B500BFF2B2 /* SDPresentationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDPresentationView.swift; sourceTree = "<group>"; };
+		A7729FA61F9A88B500BFF2B2 /* SDSelectorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDSelectorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,12 +60,22 @@
 			children = (
 				A7729F931F9A86AB00BFF2B2 /* AppDelegate.swift */,
 				A7729F951F9A86AB00BFF2B2 /* ViewController.swift */,
+				A7729FA91F9A88BD00BFF2B2 /* SDSelectotView */,
 				A7729F971F9A86AB00BFF2B2 /* Main.storyboard */,
 				A7729F9A1F9A86AB00BFF2B2 /* Assets.xcassets */,
 				A7729F9C1F9A86AB00BFF2B2 /* LaunchScreen.storyboard */,
 				A7729F9F1F9A86AB00BFF2B2 /* Info.plist */,
 			);
 			path = Example;
+			sourceTree = "<group>";
+		};
+		A7729FA91F9A88BD00BFF2B2 /* SDSelectotView */ = {
+			isa = PBXGroup;
+			children = (
+				A7729FA51F9A88B500BFF2B2 /* SDPresentationView.swift */,
+				A7729FA61F9A88B500BFF2B2 /* SDSelectorView.swift */,
+			);
+			name = SDSelectotView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +152,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7729F961F9A86AB00BFF2B2 /* ViewController.swift in Sources */,
+				A7729FA71F9A88B500BFF2B2 /* SDPresentationView.swift in Sources */,
+				A7729FA81F9A88B500BFF2B2 /* SDSelectorView.swift in Sources */,
 				A7729F941F9A86AB00BFF2B2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,6 +320,7 @@
 				A7729FA41F9A86AB00BFF2B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
