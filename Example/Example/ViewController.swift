@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController,SDSelectorViewDelegate {
     
-    
+    //Don't forget to make you scrollView be a SDSelectorView object
     @IBOutlet weak var myScroll: SDSelectorView!
     
     
