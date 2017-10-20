@@ -8,19 +8,55 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController,SDSelectorViewDelegate {
+    
+    
+    @IBOutlet weak var myScroll: SDSelectorView!
+    
+    
+    var teste: Bool = true
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.myScroll.SDdelegate = self
+        self.myScroll.presentationModeEnable = self.teste
         
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        var myImages: [UIImage] = []
+        
+        for i in 1...9{
+            let image = UIImage(named: "1\(i)")
+            myImages.append(image!)
+        }
+        
+        self.myScroll.configSDSelectorWith(imageSize: CGSize(width: 80.0, height: 80.0), spacedBy: 20.00, withImages: myImages)
+        
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func didCangedIndex(index: Int) {
+        //        print(index)
     }
-
-
+    
+    func didSelectView(index: Int) {
+        //        print(index)
+    }
+    
+    
+    
+    @IBAction func animationChange(_ sender: Any) {
+        self.teste = !self.teste
+        
+        self.myScroll.presentationModeEnable = self.teste
+        
+    }
+    
+    @IBAction func index(_ sender: Any) {
+        
+        self.myScroll.goToIndex(index: 2)
+    }
+    
 }
 

@@ -1,26 +1,82 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="iY5-zj-Iei">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="7Yr-8d-F6L">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="iY5-zj-Iei" customClass="ViewController" customModule="ScrollTest" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="Hze-Gn-zJO"/>
+                        <viewControllerLayoutGuide type="bottom" id="BlJ-B6-Ege"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="3dW-5u-5fW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="25O-H2-8Dr" customClass="SDSelectorView" customModule="ScrollTest" customModuleProvider="target">
+                                <rect key="frame" x="27.5" y="283.5" width="320" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="aFa-Pz-y1b"/>
+                                    <constraint firstAttribute="height" constant="100" id="oGf-6R-but"/>
+                                </constraints>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h3G-11-uTS">
+                                <rect key="frame" x="95" y="477.5" width="185" height="40"/>
+                                <color key="backgroundColor" red="0.36405181879999998" green="0.1097832844" blue="0.42537960409999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="185" id="Z9c-NS-xvr"/>
+                                    <constraint firstAttribute="height" constant="40" id="bJR-hW-2ls"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Enable Presentation">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="animationChange:" destination="iY5-zj-Iei" eventType="touchUpInside" id="Xh3-5q-qNG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IbY-nJ-UIM">
+                                <rect key="frame" x="95.5" y="536.5" width="185" height="40"/>
+                                <color key="backgroundColor" red="0.36405181879999998" green="0.1097832844" blue="0.42537960409999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="9iD-yZ-GUz"/>
+                                    <constraint firstAttribute="width" constant="185" id="CEi-8w-qyF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Go To Index">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="animationChange:" destination="iY5-zj-Iei" eventType="touchUpInside" id="TtW-lj-5Us"/>
+                                    <action selector="index:" destination="iY5-zj-Iei" eventType="touchUpInside" id="bM4-eI-pl2"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="h3G-11-uTS" firstAttribute="top" secondItem="25O-H2-8Dr" secondAttribute="bottom" constant="94" id="K64-zU-YUq"/>
+                            <constraint firstItem="h3G-11-uTS" firstAttribute="centerX" secondItem="3dW-5u-5fW" secondAttribute="centerX" id="hin-Mp-b4z"/>
+                            <constraint firstItem="25O-H2-8Dr" firstAttribute="centerY" secondItem="3dW-5u-5fW" secondAttribute="centerY" id="kUF-J7-aQz"/>
+                            <constraint firstItem="IbY-nJ-UIM" firstAttribute="centerX" secondItem="h3G-11-uTS" secondAttribute="centerX" id="lEE-gB-Lnq"/>
+                            <constraint firstItem="25O-H2-8Dr" firstAttribute="centerX" secondItem="3dW-5u-5fW" secondAttribute="centerX" id="qJL-4w-O5y"/>
+                            <constraint firstItem="IbY-nJ-UIM" firstAttribute="top" secondItem="h3G-11-uTS" secondAttribute="bottom" constant="19" id="wP1-bw-s0Y"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="myScroll" destination="25O-H2-8Dr" id="SB8-8L-wq3"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tfu-0R-05J" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-22" y="96"/>
         </scene>
     </scenes>
 </document>
