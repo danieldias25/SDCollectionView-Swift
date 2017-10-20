@@ -103,6 +103,14 @@ class SDSelectorView: UIScrollView {
         }
     }
     
+    func changeImageAtIndes(_ index: Int,withImage image: UIImage) {
+        if let imageView = self.subviews[index] as? UIImageView {
+            imageView.image = image
+        }
+        
+        
+    }
+    
     func goToIndex(index:Int) {
 
         self.collectionIndex = index

@@ -12,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="7Yr-8d-F6L">
             <objects>
-                <viewController id="iY5-zj-Iei" customClass="ViewController" customModule="ScrollTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="iY5-zj-Iei" customClass="ViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Hze-Gn-zJO"/>
                         <viewControllerLayoutGuide type="bottom" id="BlJ-B6-Ege"/>
@@ -21,7 +21,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="25O-H2-8Dr" customClass="SDSelectorView" customModule="ScrollTest" customModuleProvider="target">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="25O-H2-8Dr" customClass="SDSelectorView" customModule="Example" customModuleProvider="target">
                                 <rect key="frame" x="27.5" y="283.5" width="320" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="320" id="aFa-Pz-y1b"/>
@@ -51,7 +51,7 @@
                                     <constraint firstAttribute="width" constant="185" id="CEi-8w-qyF"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <state key="normal" title="Go To Index">
+                                <state key="normal" title="Go To Index 01">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>

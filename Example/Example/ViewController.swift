@@ -14,14 +14,13 @@ class ViewController: UIViewController,SDSelectorViewDelegate {
     @IBOutlet weak var myScroll: SDSelectorView!
     
     
-    var teste: Bool = true
-    
+    var enablePresentation: Bool = true
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.myScroll.SDdelegate = self
-        self.myScroll.presentationModeEnable = self.teste
+        self.myScroll.presentationModeEnable = self.enablePresentation
         
         
         var myImages: [UIImage] = []
@@ -32,7 +31,6 @@ class ViewController: UIViewController,SDSelectorViewDelegate {
         }
         
         self.myScroll.configSDSelectorWith(imageSize: CGSize(width: 80.0, height: 80.0), spacedBy: 20.00, withImages: myImages)
-        
         
     }
     
@@ -47,15 +45,16 @@ class ViewController: UIViewController,SDSelectorViewDelegate {
     
     
     @IBAction func animationChange(_ sender: Any) {
-        self.teste = !self.teste
+        self.enablePresentation = !self.enablePresentation
         
-        self.myScroll.presentationModeEnable = self.teste
+        self.myScroll.presentationModeEnable = self.enablePresentation
         
     }
     
     @IBAction func index(_ sender: Any) {
         
-        self.myScroll.goToIndex(index: 2)
+        self.myScroll.goToIndex(index: 1)
+
     }
     
 }
