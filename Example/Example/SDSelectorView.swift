@@ -10,13 +10,15 @@ import Foundation
 import UIKit
 
 protocol SDSelectorViewDelegate {
-    
+    //delegate method to supervise index changes
     func didCangedIndex(index: Int)
+    //delegate method to make actions when user touch inside an image
     func didSelectView(index: Int)
 }
 
 
 class SDSelectorView: UIScrollView {
+    
     var SDDelegate: SDSelectorViewDelegate?
     
     var presentationModeEnable = true
@@ -29,6 +31,9 @@ class SDSelectorView: UIScrollView {
     var imageSize: CGSize?
     var images: [UIImage?] = []
     var stopOver: CGFloat?
+    
+    //configuration method
+    //must be called to show the images in the correct way
     
     func configSDSelectorWith(imageSize: CGSize, spacedBy space: CGFloat, withImages images: [UIImage]) {
         
@@ -60,6 +65,8 @@ class SDSelectorView: UIScrollView {
         
     }
     
+    
+    // add imageViews to SDSelectorView
    private func createViewsForScroll(images: [UIImage]) {
         
         let myHeight = self.imageSize?.height
@@ -103,6 +110,7 @@ class SDSelectorView: UIScrollView {
         }
     }
     
+    //change image in a specific index
     func changeImageAtIndes(_ index: Int,withImage image: UIImage) {
         if let imageView = self.subviews[index] as? UIImageView {
             imageView.image = image
@@ -111,6 +119,8 @@ class SDSelectorView: UIScrollView {
         
     }
     
+    
+    //scrolls the selector to an specific index
     func goToIndex(index:Int) {
 
         self.collectionIndex = index
@@ -197,6 +207,7 @@ class SDSelectorView: UIScrollView {
         }
     }
     
+    //set the position to scroll
     func setViewsOffset(_ scrollView: UIScrollView) {
         
         let x = round(scrollView.contentOffset.x / self.stopOver!) * self.stopOver!
